@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Nepali Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Place Your Order</h1>
+    </header>
+    <main>
+        <form action="order-process.php" method="POST">
+            <label for="dish">Choose a Dish:</label>
+            <select name="dish" id="dish">
+                <option value="dal_bhat">Dal Bhat</option>
+                <option value="momo">Momo</option>
+                <option value="chatamari">Chatamari</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" min="1" required>
+            <button type="submit">Submit Order</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nepali Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
