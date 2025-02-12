@@ -1,102 +1,196 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header */
+/* General body styling */
 header {
-    background-color: #c0392b;
+    background-color: #333; /* Dark background */
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Navigation Menu */
-nav ul {
-    list-style-type: none;
-    padding: 10px;
+/* Logo styling (optional) */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+    color: #FFD700; /* Gold color for logo */
 }
 
-nav ul li {
-    display: inline;
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    flex-grow: 1;
     margin-right: 20px;
 }
 
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex; /* Arrange the items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between the items */
+}
+
+/* Navigation Link Style */
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 18px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase; /* Make the text all caps */
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+}
+
+nav ul li a:hover {
+    background-color: #FFD700; /* Hover effect - yellow */
+    color: #333; /* Change text color on hover */
 }
 
 nav ul li a.active {
-    font-weight: bold;
-    color: #f39c12;
-}
-
-/* Main Content Section */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-main h2 {
-    font-size: 28px;
-    color: #e74c3c;
-}
-
-main .btn {
-    padding: 10px 20px;
-    background-color: #e74c3c;
+    background-color: #28a745; /* Active link background color */
     color: white;
+}
+/* Navigation Bar Styling */
+nav {
+    background-color: #333; /* Dark background color */
+    color: white;
+    display: flex;
+    justify-content: center; /* Center the nav items horizontally */
+    align-items: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex; /* Arrange the items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between the items */
+}
+
+/* Navigation Link Style */
+nav ul li a {
     text-decoration: none;
-    font-size: 18px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase; /* Make the text all caps */
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+}
+
+nav ul li a:hover {
+    background-color: #FFD700; /* Hover effect - yellow */
+    color: #333; /* Change text color on hover */
+}
+
+nav ul li a.active {
+    background-color: #28a745; /* Active link background color */
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Ensure the layout is vertical */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container styling */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Set maximum width for the container */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+/* Input fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    box-sizing: border-box; /* Prevent padding from expanding the width */
 }
 
-main .btn:hover {
-    background-color: #c0392b;
-}
-
-/* Footer */
-footer {
-    background-color: #2c3e50;
+/* Button styling */
+button {
+    background: #28a745;
     color: white;
-    padding: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: background 0.3s;
+    box-sizing: border-box; /* Prevent padding from expanding the button */
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Alert messages */
+.alert {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
-footer a {
-    color: #f39c12;
+.footer-container a {
+    color: #FFD700;
     text-decoration: none;
+    margin: 0 10px;
 }
 
-footer a:hover {
+.footer-container a:hover {
     text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main .btn {
-        font-size: 16px;
-    }
 }
