@@ -1,0 +1,194 @@
+<?php include 'db.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Nepali Restaurant</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            padding: 20px 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        /* Hero section */
+        .hero {
+            position: relative;
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            background-color: #f0a500;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #b12704;
+        }
+
+        /* Content section */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .container h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #f0a500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="reservation.php">Reservation</a></li>
+        <li><a href="order.php">Order</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="feedback.php">Feedback</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to Our Nepali Restaurant</h1>
+    <p>Experience authentic Nepali cuisine with us! Enjoy delicious flavors, traditional recipes, and a warm atmosphere.</p>
+    <a href="menu.php" class="btn">Explore Our Menu</a>
+</div>
+
+<!-- Main content section -->
+<div class="container">
+    <h2>Authentic Nepali Cuisine</h2>
+    <p>Our restaurant serves a variety of traditional Nepali dishes that will take you on a culinary journey through Nepal. From momos to dal bhat, each dish is prepared with authentic ingredients and love.</p>
+    <p>Join us for a dining experience that feels like home, whether you're visiting for a family gathering or a special occasion.</p>
+</div>
+
+<?php include 'footer.php'; ?>
+
+</body>
+</html>
