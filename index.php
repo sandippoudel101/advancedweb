@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepali Restaurant | Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <?php include 'nav.php'; ?>
