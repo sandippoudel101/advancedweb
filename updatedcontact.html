@@ -1,0 +1,51 @@
+<?php include 'db.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nepali Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<?php include 'nav.php'; ?>
+
+<div class="contact-container">
+    <h2>Contact Us</h2>
+
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+        <div class="info-box">
+            <p><strong>Email:</strong> info@nepalirestaurant.com</p>
+        </div>
+        <div class="info-box">
+            <p><strong>Phone:</strong> +61 123 456 789</p>
+        </div>
+        <div class="info-box">
+            <img src="C:\Users\hp\Desktop\New folder\nepali_restaurant.address.jpg" alt="Location Icon">
+            <p><strong>Address:</strong> 123 Nepal Street, Sydney, Australia</p>
+        </div>
+    </div>
+
+    <!-- Map Image -->
+    <div class="map-image-container">
+        <h3>Our Location</h3>
+        <img src="C:\Users\hp\Desktop\New folder\location.jpg" alt="Map Location" class="map-image">
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="send_message.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<?php include 'footer.php'; ?>
+</body>
+</html>
