@@ -1,0 +1,104 @@
+<?php include 'db.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Nepali Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .food-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+        }
+        .food-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<?php include 'nav.php'; ?>
+
+<div class="video-background">
+    <video autoplay muted loop>
+        <source src="nepali_food_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div class="content">
+    <h2>Our Menu</h2>
+    <p>Explore our delicious Nepali dishes.</p>
+
+    <div class="food-grid">
+        <div class="food-item">
+            <img src="momo.jpg" alt="Momo">
+            <p>Momo</p>
+        </div>
+        <div class="food-item">
+            <img src="dal_bhat.jpg" alt="Nepali Dal Bhat">
+            <p>Nepali Dal Bhat</p>
+        </div>
+        <div class="food-item">
+            <img src="chowmein.jpg" alt="Chowmein">
+            <p>Chowmein</p>
+        </div>
+        <div class="food-item">
+            <img src="newari_kaja_set.jpg" alt="Newari Kaja Set">
+            <p>Newari Kaja Set</p>
+        </div>
+        <div class="food-item">
+            <img src="thukpa.jpg" alt="Thukpa">
+            <p>Thukpa</p>
+        </div>
+    </div>
+</div>
+
+<?php include 'footer.php'; ?>
+
+</body>
+</html>
