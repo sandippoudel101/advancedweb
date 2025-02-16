@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Nepali Restaurant</title>
     <style>
-        /* General body styles */
+        /* General body styles
         body {
             font-family: 'Roboto', sans-serif;
             background: url('background.jpg') no-repeat center center/cover;
